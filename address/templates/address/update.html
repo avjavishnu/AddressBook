@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Page</title>
+</head>
+<body>
+<form action="updateR/{{ query.id }}" method="post">
+    {% csrf_token %}
+    <P>Student Name</P>
+    <input name = "sname" value = "{{ query.Name_Student }}">
+    <p>Mobile number</p>
+    <input name = "smobile" value = "{{ query.Mobile_Number }}">
+    <p>Street</p>
+    <input name = "sstreet" value = "{{ query.Street }}">
+    <p>City</p>
+    <input name = "scity" value = "{{ query.City }}">
+    <input type="submit" value = "Submit">
+</form>
+</body>
+</html>

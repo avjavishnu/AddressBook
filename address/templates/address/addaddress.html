@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address add</title>
+</head>
+<body>
+<form action="addaddr" method="post">
+{% csrf_token %}
+    <p>student name</p>
+        <input name="sname">
+    <p>student mobile</p>
+        <input name="smobile">
+    <p>Living street</p>
+        <input name="sstreet">
+    <p>living city</p>
+        <input name="scity">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

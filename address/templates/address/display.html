@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display address</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile number</th>
+        <th>Street</th>
+        <th>City</th>
+    </tr>
+    {% for r in query %}
+    <tr>
+        <td><a href="updateD/{{ r.id }}">{{ r.id }}</a></td>
+        <td>{{r.Name_Student}}</td>
+        <td>{{r.Mobile_Number}}</td>
+        <td>{{r.Street}}</td>
+        <td>{{r.City}}</td>
+        <td><a href="w_deleter/{{ r.id }}">delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'w_addA' %}">Add Address</a>
+</body>
+</html>
